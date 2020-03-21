@@ -3,13 +3,11 @@ title: Nginx优化总结（1）
 tags:
 - Nginx
 - Linux
-desc: 部署完nginx之后，最重要的则是优化配置。适合的配置，才能发挥服务器最佳的性能。路漫漫其修远兮，吾将上下而求索…
+desc: 部署完Nginx之后，最重要的则是优化配置。适合的配置，才能发挥服务器最佳的性能。路漫漫其修远兮，吾将上下而求索…
 layout: post
 ---
 
-Curabitur dolor nisi, consectetur id ipsum et, facilisis aliquet est. Aenean nec iaculis nisi. Quisque non nisl eu leo ultrices rhoncus. Pellentesque at euismod est. Pellentesque ac nisi semper, molestie risus vitae, ullamcorper augue. Fusce non eleifend massa, vel mattis urna. Morbi facilisis rutrum eleifend.
-<!-- more -->
- Mauris a molestie neque. Aliquam non malesuada nisi, a sodales purus. Nam molestie faucibus sapien eu euismod. Sed scelerisque ornare euismod. In tincidunt est vel pharetra convallis. Praesent vitae nisi odio.
+对Nginx优化分为两种：Nginx配置文件优化和系统优化
 
 ## 修改Nginx配置文件
 
