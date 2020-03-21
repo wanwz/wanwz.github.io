@@ -1,11 +1,9 @@
 ---
-title: Something Awesome!
+title: Nginx优化总结（1）
 tags:
-- Curabitur
-- Dolor
-- Id
-- Facilisis
-desc: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula gravida felis et dapibus.
+- Nginx
+- Linux
+desc: 部署完nginx之后，最重要的则是优化配置。适合的配置，才能发挥服务器最佳的性能。路漫漫其修远兮，吾将上下而求索…
 layout: post
 ---
 
@@ -15,17 +13,18 @@ Curabitur dolor nisi, consectetur id ipsum et, facilisis aliquet est. Aenean nec
 
 ## Nunc
 
-```html
-<html>
-    <head>
-    </head>
-    <body>
-    </body>
-</html>
+```shell
+vim /opt/nginx/conf/nginx.conf
+    user nginx;
+    #如果请求数比较多，一般推荐最大修改成CPU内核数等同的值
+    worker_processes 1;
+    
+    events {
+        #每个进程可以打开的最大连接数
+        worker_connection 1024;
+        #可以一次建立多个连接
+       multi_accpet on;
+       #epoll模式效率更高
+       use epoll;
+    }
 ```
-
-## Maecenas
-Maecenas ex dolor, tincidunt volutpat molestie et, bibendum sed turpis. Fusce dictum dui massa, sed lobortis risus consectetur eget. Quisque ornare quis tortor nec blandit. Donec pretium hendrerit tincidunt. Nulla convallis placerat efficitur. Curabitur tristique nibh vitae suscipit molestie. In commodo quam purus, eget auctor sapien auctor id.
-
-## Aenean
-Aenean molestie, augue at semper imperdiet, ante metus cursus turpis, vitae placerat ligula velit at lacus. Nunc magna elit, sollicitudin et elit nec, hendrerit porta odio. Aliquam congue, lacus non sodales venenatis, lectus justo tincidunt leo, scelerisque ultricies libero nisi sed lorem. Donec eu facilisis eros. Nunc eu diam lacus. Ut at leo ornare, pulvinar lacus a, cursus dolor. Sed tincidunt dignissim purus, at blandit ante. Duis condimentum dui quis pretium vehicula. Ut fermentum justo vitae mattis dapibus. Quisque vulputate nunc sem, at dignissim lectus interdum vel. Donec finibus augue sit amet ipsum convallis, a sollicitudin ante convallis. Pellentesque auctor felis lacus, vitae mollis orci bibendum at. Nulla feugiat eu ipsum ut ullamcorper. Mauris viverra mi bibendum mollis egestas.
