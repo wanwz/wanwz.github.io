@@ -11,7 +11,7 @@ Curabitur dolor nisi, consectetur id ipsum et, facilisis aliquet est. Aenean nec
 <!-- more -->
  Mauris a molestie neque. Aliquam non malesuada nisi, a sodales purus. Nam molestie faucibus sapien eu euismod. Sed scelerisque ornare euismod. In tincidunt est vel pharetra convallis. Praesent vitae nisi odio.
 
-## Nunc
+## 修改Nginx配置文件
 
 ```shell
 vim /opt/nginx/conf/nginx.conf
