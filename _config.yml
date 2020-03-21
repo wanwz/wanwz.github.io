@@ -3,7 +3,7 @@ title: Wanwz's Blog
 baseurl: "/wanwz.github.io"
 desc: A minimal blog for off-topic blog entries.
 about: I am a engineer who can do anything. lol~~
-image: https://pinto-light.glitch.me/?width=500&height=500&url=https://i.imgur.com/mxUVc2x.jpg&extension=jpg
+image: https://wanwz.github.io/backimage.jpeg
 excerpt_separator: "<!-- more -->"
 markdown: kramdown
 gems:
